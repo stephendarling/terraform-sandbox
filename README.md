@@ -17,7 +17,7 @@ $ touch secrets.auto.tfvars
 # Add your access key
 $ echo access_key = \"<YOUR_ACCESS_KEY>\" >> secrets.auto.tfvars
 # Add you secret key
-$ echo access_key = \"<YOUR_SECRET_KEY>\" >> secrest.auto.tfvars
+$ echo access_key = \"<YOUR_SECRET_KEY>\" >> secrets.auto.tfvars
 ```
 The additional `.auto.` tells terraform that this variable file should be loaded by default. This file already exists in the `.gitignore` so you won't have to worry about adding it. Variables that do not contain secrets should be stored in the `terraform.tfvars` or any other file that you create with a `.tfvars` (maunual load with `-var-file="<filename>"`) or a `.auto.tfvars` extension. 
 To use variables in your `.tf` files, make sure to declare them at the top:
